@@ -9,8 +9,8 @@ import com.clarit.hs.service.items.Room;
 
 public interface ItemRepository extends MongoRepository<Room, String> {
     
-    @Query("{number:'?0'}")
-    Room findItemByNumber(String number);
+    @Query(value="{number:?0}")
+    List<Room> findByNumber(int number);
     
     @Query(value="{isOccupied:'?0'}")
     List<Room> findAll(boolean isOccupied);

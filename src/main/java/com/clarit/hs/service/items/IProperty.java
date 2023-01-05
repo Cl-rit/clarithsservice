@@ -15,6 +15,6 @@ public interface IProperty {
 
 	public List<Room> getAll(boolean occupied) ;
     public Room book(int roomNumber) ;
-    public Room get(int roomNumber) ;
+    public List<Room> get(int roomNumber) ;
     public void cancelBooking(int roomNumber) ;
 }

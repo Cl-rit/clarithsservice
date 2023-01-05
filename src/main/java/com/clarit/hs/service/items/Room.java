@@ -3,12 +3,13 @@ package com.clarit.hs.service.items;
 import java.util.Date;
 
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.hateoas.RepresentationModel;
 
 /**
  * Created by mnachiappan on 1/4/23.
  */
 @Document("rooms")
-public class Room {
+public class Room extends RepresentationModel<Room>{
     private int number;
     private RoomType roomType;
     private boolean isOccupied;

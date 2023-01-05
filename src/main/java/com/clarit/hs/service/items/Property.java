@@ -26,8 +26,8 @@ public class Property implements IProperty {
     }
 
     @Override
-    public Room get(int roomNumber) {
-        return null;
+    public List<Room> get(int roomNumber) {
+        return itemRepository.findByNumber(roomNumber);
     }
 
     @Override
