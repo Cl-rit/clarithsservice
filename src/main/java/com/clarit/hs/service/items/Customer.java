@@ -1,6 +1,8 @@
 package com.clarit.hs.service.items;
 
-public class Customer {
+import org.springframework.hateoas.RepresentationModel;
+
+public class Customer extends RepresentationModel<Customer>{
 	
 	private String id;
 	private String name;
