@@ -16,7 +16,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  */
 @ControllerAdvice
 @RestController
-public class ClaritResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+public class ClaritResponseAdvice extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(ItemNotFoundException.class)
 	public final ResponseEntity<ErrorDetails> handleUserNotFoundException(ItemNotFoundException ex, WebRequest request) {
