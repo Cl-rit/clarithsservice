@@ -7,8 +7,10 @@ import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import com.clarit.hs.controller.IAdminService;
+import com.clarit.hs.service.exception.ItemNotFoundException;
 import com.clarit.hs.service.items.IProperty;
 import com.clarit.hs.service.items.Room;
 
@@ -46,6 +48,9 @@ public class AdminService  implements IAdminService {
 	@Override
 	public CollectionModel<Room>  get(int number) {
 		List<Room> rooms = property.get(number);
+		if(CollectionUtils.isEmpty(rooms)) {
+			throw new ItemNotFoundException("Unable to find entity", "Pass a valid room number and try again");
+		}
 		for(Room room : rooms) {
 	        Link selfLink = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(room.getNumber()).withSelfRel();
 	        room.add(selfLink);
