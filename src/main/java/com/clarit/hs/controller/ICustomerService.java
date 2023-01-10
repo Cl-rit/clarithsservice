@@ -1,7 +1,5 @@
 package com.clarit.hs.controller;
 
-import java.util.List;
-
 import javax.json.JsonPatch;
 
 import org.springframework.hateoas.CollectionModel;
@@ -13,13 +11,18 @@ import com.clarit.hs.service.items.Customer;
 @RestController
 @RequestMapping(value = "/customers")
 public interface ICustomerService {
+
+
 	
 	//Must implement pagination
 	@GetMapping(produces = { "application/hal+json" })
-	public CollectionModel<Customer> getAll();
-	
+	public CollectionModel<Customer> getAll(String id);
+
+
+
+
 	@GetMapping(value="/{name}", produces = { "application/hal+json" })
-	public Customer get(String name);
+	public CollectionModel<Customer> get(String name);
 	
 	@DeleteMapping(value="/{name}", produces = { "application/hal+json" })
 	public void delete(String name);
@@ -29,7 +32,8 @@ public interface ICustomerService {
 	
 	@PostMapping(produces = { "application/hal+json" })
 	public Customer add(@RequestBody Customer customer);
-	
+
+
 	@PatchMapping (value="/{name}", produces = { "application/hal+json" })
 	public Customer patch(@RequestBody JsonPatch jsonPatch);
 	

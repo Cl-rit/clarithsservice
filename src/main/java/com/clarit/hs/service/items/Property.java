@@ -32,6 +32,7 @@ public class Property implements IProperty {
 
     @Override
     public void cancelBooking(int roomNumber) {
+        itemRepository.deleteAll();
 
     }
     

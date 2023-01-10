@@ -63,6 +63,8 @@ public class AdminService  implements IAdminService {
 	@Override
 	public void cancelBooking(int number) {
 		// TODO Auto-generated method stub
+		List<Room> rooms = property.get(number);
+		rooms.remove(number);
 		
 	}
 }
