@@ -3,12 +3,7 @@ package com.clarit.hs.controller;
 import java.util.List;
 
 import org.springframework.hateoas.CollectionModel;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.clarit.hs.service.items.Room;
 
@@ -24,10 +19,12 @@ public interface IAdminService {
 	
 	@PostMapping(value = "/{number}")
 	public Room book(@PathVariable Integer number);
-	
+
+
+
 	@GetMapping(value = "/{number}")
 	public CollectionModel<Room>  get(@PathVariable int number);
 	
-	@DeleteMapping(value = "{number}")
+	@DeleteMapping(value = "/{number}")
 	public void cancelBooking(int number);
 }
