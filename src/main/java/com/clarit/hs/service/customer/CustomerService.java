@@ -27,10 +27,10 @@ public class CustomerService implements ICustomerService {
 
 		List<Customer> customers = iPropertyCus.getAll(id);
 		for (Customer customer : customers ){
-			Link selfLink = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(customer.getId()).withSelfRel();
+			Link selfLink = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(customer.getId()).withSelfRel();
 			customer.add(selfLink);
 		}
-		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).withSelfRel();
+		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).withSelfRel();
 		CollectionModel<Customer> result = CollectionModel.of(customers,link);
 		return result;
 	}
@@ -45,10 +45,10 @@ public class CustomerService implements ICustomerService {
 
 		List<Customer> customers = iPropertyCus.get(name);
 		for(Customer customer : customers) {
-			Link selfLink = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(customer.getName()).withSelfRel();
+			Link selfLink = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(customer.getName()).withSelfRel();
 			customer.add(selfLink);
 		}
-		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).withSelfRel();
+		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).withSelfRel();
 		CollectionModel<Customer> result = CollectionModel.of(customers, link);
 		return result;
 	}
@@ -68,7 +68,7 @@ public class CustomerService implements ICustomerService {
 	@Override
 	public Customer add(Customer customer) {
 		Customer customer1 = iPropertyCus.add(String.valueOf(customer));
-		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(customer).withSelfRel();
+		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(customer1).withSelfRel();
 		customer1.add(link);
 		return customer1;
 	}

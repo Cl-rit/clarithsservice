@@ -16,16 +16,16 @@ public interface ICustomerService {
 	
 	//Must implement pagination
 	@GetMapping(produces = { "application/hal+json" })
-	public CollectionModel<Customer> getAll(String id);
+	public CollectionModel<Customer> getAll(@PathVariable String id);
 
 
 
 
 	@GetMapping(value="/{name}", produces = { "application/hal+json" })
-	public CollectionModel<Customer> get(String name);
+	public CollectionModel<Customer> get(@PathVariable String name);
 	
 	@DeleteMapping(value="/{name}", produces = { "application/hal+json" })
-	public void delete(String name);
+	public void delete(@PathVariable String name);
 	
 	@PutMapping(value="/{name}", produces = { "application/hal+json" })
 	public Customer update(@RequestBody Customer customer);

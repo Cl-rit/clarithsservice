@@ -1,6 +1,10 @@
 package com.clarit.hs.service.items;
 
+import org.springframework.data.annotation.AccessType;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
+
+import java.util.List;
 
 public class Customer extends RepresentationModel<Customer>{
 	
@@ -39,6 +43,12 @@ public class Customer extends RepresentationModel<Customer>{
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	@AccessType(AccessType.Type.PROPERTY)
+	public void setLinks(List<Link> links) {
+		super.removeLinks();
+		super.add(links);
 	}
 	
 }
