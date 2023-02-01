@@ -1,11 +1,11 @@
 package com.clarit.hs.controller;
 
-import javax.json.JsonPatch;
-
+import com.clarit.hs.service.items.Customer;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.fge.jsonpatch.JsonPatch;
+import com.github.fge.jsonpatch.JsonPatchException;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.web.bind.annotation.*;
-
-import com.clarit.hs.service.items.Customer;
 
 
 @RestController
@@ -16,10 +16,7 @@ public interface ICustomerService {
 	
 	//Must implement pagination
 	@GetMapping(produces = { "application/hal+json" })
-	public CollectionModel<Customer> getAll(@PathVariable String id);
-
-
-
+	public CollectionModel<Customer> getAll( String id);
 
 	@GetMapping(value="/{name}", produces = { "application/hal+json" })
 	public CollectionModel<Customer> get(@PathVariable String name);
@@ -33,9 +30,10 @@ public interface ICustomerService {
 	@PostMapping(produces = { "application/hal+json" })
 	public Customer add(@RequestBody Customer customer);
 
+	@PatchMapping(value = "/{name}",produces = {"application/json-patch+json"})
+	 public Customer patch(@RequestBody JsonPatch jsonPatch, @PathVariable String name) throws JsonPatchException, JsonProcessingException;
 
-	@PatchMapping (value="/{name}", produces = { "application/hal+json" })
-	public Customer patch(@RequestBody JsonPatch jsonPatch);
-	
+
+
 
 }

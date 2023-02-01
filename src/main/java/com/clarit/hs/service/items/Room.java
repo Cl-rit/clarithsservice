@@ -21,7 +21,6 @@ public class Room extends RepresentationModel<Room>{
     private RoomType roomType;
     private boolean isOccupied;
     private Date availbility;
-  
 
     public int getNumber() {
 		return number;

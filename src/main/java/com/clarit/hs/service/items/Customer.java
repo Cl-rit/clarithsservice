@@ -3,9 +3,9 @@ package com.clarit.hs.service.items;
 import org.springframework.data.annotation.AccessType;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
-
 public class Customer extends RepresentationModel<Customer>{
 	
 	private String id;
@@ -13,7 +13,9 @@ public class Customer extends RepresentationModel<Customer>{
 	private String email;
 	private String phone;
 	private String address;
-	
+
+
+
 	public String getId() {
 		return id;
 	}
@@ -50,5 +52,6 @@ public class Customer extends RepresentationModel<Customer>{
 		super.removeLinks();
 		super.add(links);
 	}
-	
+
+
 }
