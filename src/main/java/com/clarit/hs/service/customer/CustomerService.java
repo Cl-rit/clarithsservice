@@ -1,12 +1,12 @@
 package com.clarit.hs.service.customer;
 
-import javax.json.JsonPatch;
-
-import com.clarit.hs.controller.IAdminService;
 import com.clarit.hs.controller.ICustomerService;
 import com.clarit.hs.service.items.Customer;
-
 import com.clarit.hs.service.items.IPropertyCus;
+import com.clarit.hs.service.items.repo.ItemRepositoryCus;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.fge.jsonpatch.JsonPatch;
+import com.github.fge.jsonpatch.JsonPatchException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Link;
@@ -20,7 +20,6 @@ public class CustomerService implements ICustomerService {
 
 	@Autowired
 	IPropertyCus iPropertyCus;
-
 
 	@Override
 	public CollectionModel<Customer> getAll(String id) {
@@ -41,7 +40,7 @@ public class CustomerService implements ICustomerService {
 
 	@Override
 	public CollectionModel<Customer> get(String name) {
-		// TODO Auto-generated method stub
+
 
 		List<Customer> customers = iPropertyCus.get(name);
 		for(Customer customer : customers) {
@@ -55,29 +54,35 @@ public class CustomerService implements ICustomerService {
 
 	@Override
 	public void delete(String name) {
-		// TODO Auto-generated method stub
-		
+
+		iPropertyCus.delete(name);
 	}
 
 	@Override
 	public Customer update(Customer customer) {
-		// TODO Auto-generated method stub
+
+		Customer customer1 = iPropertyCus.update(customer);
+		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(customer1).withSelfRel();
+		customer1.add(link);
+
 		return null;
 	}
 
 	@Override
 	public Customer add(Customer customer) {
-		Customer customer1 = iPropertyCus.add(String.valueOf(customer));
+		Customer customer1 = iPropertyCus.add(customer);
 		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(customer1).withSelfRel();
 		customer1.add(link);
 		return customer1;
 	}
 
-
 	@Override
-	public Customer patch(JsonPatch jsonPatch) {
-		// TODO Auto-generated method stub
-		return null;
+	public Customer patch(JsonPatch jsonPatch, String name) throws JsonPatchException, JsonProcessingException {
+		Customer customer1 = iPropertyCus.patch(jsonPatch, name);
+		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(name).withSelfRel();
+		customer1.add(link);
+
+		return customer1;
 	}
 
 }

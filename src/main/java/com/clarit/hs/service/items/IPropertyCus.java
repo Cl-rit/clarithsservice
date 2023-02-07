@@ -1,5 +1,9 @@
 package com.clarit.hs.service.items;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.github.fge.jsonpatch.JsonPatch;
+import com.github.fge.jsonpatch.JsonPatchException;
+
 import java.util.List;
 
 public interface IPropertyCus {
@@ -8,6 +12,17 @@ public interface IPropertyCus {
 
     public List<Customer> get(String customerName);
 
-    public Customer add(String customerName);
+    public Customer add(Customer customer);
+
+    public void delete(String name);
+
+    public Customer update(Customer customer);
+
+     public Customer patch(JsonPatch jsonPatch, String name) throws JsonPatchException, JsonProcessingException;
+
+
+
+
+
 }
 

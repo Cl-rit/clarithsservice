@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import com.clarit.hs.service.items.repo.ItemRepository;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,8 +20,8 @@ public class Property implements IProperty {
     }
 
     @Override
-    public Room book(int roomNumber) {
-        return bookRoom();
+    public Room book(Room room) {
+        return bookRoom(room);
     }
 
     @Override
@@ -31,20 +30,17 @@ public class Property implements IProperty {
     }
 
     @Override
-    public void cancelBooking(int roomNumber) {
+    public void cancelBooking(int number) {
 
+        itemRepository.delete(itemRepository.deleteByNumber(number));
     }
-    
+
     private List<Room> getAllRooms(){
     	return itemRepository.findAll();
     }
     
-    private Room bookRoom() {
-    	Room room = new Room();
-        room.setAvailbility(new Date());
-        room.setIsOccupied(false);
-        room.setNumber(123);
-        room.setRoomType(RoomType.DOUBLE);
+    private Room bookRoom(Room room) {
+
         return itemRepository.save(room);
     }
 }
