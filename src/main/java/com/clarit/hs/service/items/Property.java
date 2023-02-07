@@ -40,11 +40,7 @@ public class Property implements IProperty {
     }
     
     private Room bookRoom(Room room) {
-    	//Room room = new Room();
-        //room.setAvailbility(new Date());
-        //room.setIsOccupied(false);
-        //room.setNumber(123);
-        //room.setRoomType(RoomType.DOUBLE);
+
         return itemRepository.save(room);
     }
 }

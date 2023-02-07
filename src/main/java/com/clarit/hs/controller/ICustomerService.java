@@ -1,5 +1,6 @@
 package com.clarit.hs.controller;
 
+import com.clarit.hs.service.exception.ItemNotFoundException;
 import com.clarit.hs.service.items.Customer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.fge.jsonpatch.JsonPatch;
@@ -19,7 +20,7 @@ public interface ICustomerService {
 	public CollectionModel<Customer> getAll( String id);
 
 	@GetMapping(value="/{name}", produces = { "application/hal+json" })
-	public CollectionModel<Customer> get(@PathVariable String name);
+	public CollectionModel<Customer> get(@PathVariable String name) throws ItemNotFoundException;
 	
 	@DeleteMapping(value="/{name}", produces = { "application/hal+json" })
 	public void delete(@PathVariable String name);

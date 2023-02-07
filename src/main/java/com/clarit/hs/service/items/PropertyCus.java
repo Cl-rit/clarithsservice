@@ -86,11 +86,7 @@ public class PropertyCus implements IPropertyCus{
     }
 
     public Customer applyPatchToCustomer(JsonPatch jsonPatch, Customer customer) throws JsonPatchException, JsonProcessingException {
-       //JsonPatch patched = jsonPatch.apply(objectMapper.convertValue(customer, JsonPatch.class));
-       // JsonPatch origal = objectMapper.convertValue(customer, JsonPatch.class);
 
-        //System.out.println(origal);
-       // JsonNode patchNode = objectMapper.readTree(c);
         JsonNode df = jsonPatch.apply(objectMapper.convertValue(customer, JsonNode.class));
 
         return objectMapper.treeToValue(df,Customer.class);

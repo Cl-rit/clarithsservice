@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.clarit.hs.service.items.Room;
 
-import javax.websocket.server.PathParam;
+
 
 /**
  * Created by mnachiappan on 1/4/23.

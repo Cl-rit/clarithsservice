@@ -40,7 +40,7 @@ public class CustomerService implements ICustomerService {
 
 	@Override
 	public CollectionModel<Customer> get(String name) {
-		// TODO Auto-generated method stub
+
 
 		List<Customer> customers = iPropertyCus.get(name);
 		for(Customer customer : customers) {
@@ -54,13 +54,13 @@ public class CustomerService implements ICustomerService {
 
 	@Override
 	public void delete(String name) {
-		// TODO Auto-generated method stub
+
 		iPropertyCus.delete(name);
 	}
 
 	@Override
 	public Customer update(Customer customer) {
-		// TODO Auto-generated method stub
+
 		Customer customer1 = iPropertyCus.update(customer);
 		Link link = WebMvcLinkBuilder.linkTo(ICustomerService.class).slash(customer1).withSelfRel();
 		customer1.add(link);

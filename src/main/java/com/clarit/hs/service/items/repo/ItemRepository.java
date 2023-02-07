@@ -21,20 +21,9 @@ public interface ItemRepository extends MongoRepository<Room, String> {
     
     public long count();
 
-  //  public List<Room> deleteAll(int number);
-
   @Query(value = "{number:?0}", delete=true)
   public Room deleteByNumber(int number);
 
-  //  List <Room> deleteByNumber(String number);
-
-  //  Long deleteRoomByNumber(String number);
-
-   // @Query(value = "{ 'number' : ?0 }",delete = true)
-    // Room findAndRemove(String number);
-
- //  @Query(value = "{ number : ?0}",delete = true)
- // Room findByNumberOne(int number);
 
 
 }

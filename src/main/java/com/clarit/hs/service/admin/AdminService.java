@@ -34,10 +34,6 @@ public class AdminService  implements IAdminService {
 		for(Room room : rooms) {
 	        Link selfLink = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(room.getNumber()).withSelfRel();
 	        room.add(selfLink);
-			//if(itemRepositoryCus.findAll(false).size()>0){
-			//	Link ordersLink = WebMvcLinkBuilder.linkTo(IAdminService.class).withSelfRel();
-			//	room.add(ordersLink);
-			//}
 		}
 		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).withSelfRel();
 	    CollectionModel<Room> result = CollectionModel.of(rooms, link);
@@ -71,19 +67,7 @@ public class AdminService  implements IAdminService {
 
 	@Override
 	public void cancelBooking(int number) {
-		// TODO Auto-generated method stub
-		/*
-		List<Room> rooms = property.cancelBooking(number);
-		for(Room room : rooms) {
-			Link selfLink = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(room.getNumber()).withSelfRel();
-			room.add(selfLink);
-		}
-		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).withSelfRel();
-		CollectionModel<Room> result = CollectionModel.of(rooms, link);
 
-			return null;
-
-		 */
 		property.cancelBooking(number);
 	}
 		
