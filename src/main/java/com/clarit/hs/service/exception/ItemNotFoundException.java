@@ -1,16 +1,8 @@
-/**
- * {user} create at 7:33:33 PM
- */
 package com.clarit.hs.service.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-/**
- * Not Found Exception for all type of resource not found
- * Created by mnachiappan on Jan 8, 2023.
- *
- */
 @ResponseStatus(code = HttpStatus.NOT_FOUND)
 public class ItemNotFoundException extends RuntimeException{
 
@@ -29,11 +21,13 @@ public class ItemNotFoundException extends RuntimeException{
 	}
 	
 	public ItemNotFoundException(String message, String details) {
+
 		this.message = message;
 		this.details = details;
 	}
 
-	public String getMessage() {
+
+    public String getMessage() {
 		return message;
 	}
 

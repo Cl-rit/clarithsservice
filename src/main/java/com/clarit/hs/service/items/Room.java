@@ -8,20 +8,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 /**
  * Created by mnachiappan on 1/4/23.
  */
 @Document("rooms")
-@JsonInclude(value = Include.NON_NULL)
 public class Room extends RepresentationModel<Room>{
     private int number;
     private RoomType roomType;
     private boolean isOccupied;
     private Date availbility;
-  
+
+   
 
     public int getNumber() {
 		return number;
@@ -58,10 +55,12 @@ public class Room extends RepresentationModel<Room>{
     public void setAvailbility(Date availbility) {
         this.availbility = availbility;
     }
-    
+
     @AccessType(AccessType.Type.PROPERTY)
     public void setLinks(List<Link> links) {
         super.removeLinks();
         super.add(links);
     }
+
+
 }

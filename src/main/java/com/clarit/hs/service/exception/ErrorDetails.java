@@ -1,10 +1,12 @@
 package com.clarit.hs.service.exception;
+
 /**
  * Error details for all API responses
  * Created by mnachiappan on Jan 8, 2023.
  *
  */
 public class ErrorDetails {
+
 
 	private String message;
 	private String details;
@@ -15,6 +17,9 @@ public class ErrorDetails {
 		this.message = message;
 		this.details = details;
 	}
+
+
+
 
 	public String getMessage() {
 		return message;

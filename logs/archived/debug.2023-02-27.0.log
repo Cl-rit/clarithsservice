@@ -1,0 +1,298 @@
+2023-02-27 10:25:50 [http-nio-9090-exec-3] DEBUG c.c.h.s.customer.CustomerService -
+                authenticating username - jerald
+2023-02-27 10:25:55 [http-nio-9090-exec-4] DEBUG c.c.h.s.customer.CustomerService -
+                authenticating username - jerald
+2023-02-27 10:54:09 [http-nio-9090-exec-5] INFO  c.c.h.s.customer.CustomerService -
+                authenticating username - jerald
+2023-02-27 13:10:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-02-27 13:10:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 66ms. Found 2 MongoDB repository interfaces.
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7ca8d498' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:14 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:10:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 9090 (http)
+2023-02-27 13:10:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:10:15 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2023-02-27 13:10:15 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.31]
+2023-02-27 13:10:15 [main] INFO  o.a.c.core.AprLifecycleListener -
+                Loaded APR based Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-02-27 13:10:15 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2023-02-27 13:10:15 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-02-27 13:10:15 [main] INFO  o.a.c.core.AprLifecycleListener -
+                OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-02-27 13:10:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2023-02-27 13:10:15 [main] INFO  o.s.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 2379 ms
+2023-02-27 13:10:16 [main] INFO  org.mongodb.driver.cluster -
+                Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-02-27 13:10:16 [cluster-ClusterId{value='63fc5e60e396b75c9168a391', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017
+2023-02-27 13:10:16 [cluster-ClusterId{value='63fc5e60e396b75c9168a391', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+                Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6909900}
+2023-02-27 13:10:16 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'models' in type 'Affordance' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:10:16 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'affordances' in type 'Link' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:10:17 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@84f51d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@34ab26a, org.springframework.security.web.header.HeaderWriterFilter@4597e6e3, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@5eabff6b, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@5856dbe4, org.springframework.security.web.authentication.logout.LogoutFilter@602298b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12209826, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f39269d, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@7af443a3, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@7b25ab31, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45b96e4c, org.springframework.security.web.session.SessionManagementFilter@5e3d2765, org.springframework.security.web.access.ExceptionTranslationFilter@30d5e37c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63a7781]
+2023-02-27 13:10:17 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:10:17 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping -
+                Adding welcome page: class path resource [static/index.html]
+2023-02-27 13:10:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:10:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 9090 (http) with context path ''
+2023-02-27 13:11:57 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:12:01 [main] INFO  c.c.hs.service.ClaritHSApplication -
+                Starting ClaritHSApplication on krishna with PID 19020 (C:\Users\tamil\Documents\clarit\target\classes started by krishna in C:\Users\tamil\Documents\clarit)
+2023-02-27 13:12:01 [main] DEBUG c.c.hs.service.ClaritHSApplication -
+                Running with Spring Boot v2.3.0.M2, Spring v5.2.3.RELEASE
+2023-02-27 13:12:01 [main] INFO  c.c.hs.service.ClaritHSApplication -
+                No active profile set, falling back to default profiles: default
+2023-02-27 13:12:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-02-27 13:12:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 56ms. Found 2 MongoDB repository interfaces.
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@60859f5a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:12:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 9090 (http)
+2023-02-27 13:12:02 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:12:02 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2023-02-27 13:12:02 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.31]
+2023-02-27 13:12:02 [main] INFO  o.a.c.core.AprLifecycleListener -
+                Loaded APR based Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-02-27 13:12:02 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2023-02-27 13:12:02 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-02-27 13:12:02 [main] INFO  o.a.c.core.AprLifecycleListener -
+                OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-02-27 13:12:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2023-02-27 13:12:02 [main] INFO  o.s.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1819 ms
+2023-02-27 13:12:03 [main] INFO  org.mongodb.driver.cluster -
+                Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-02-27 13:12:03 [cluster-ClusterId{value='63fc5ecbc92f967251ca9719', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+2023-02-27 13:12:03 [cluster-ClusterId{value='63fc5ecbc92f967251ca9719', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+                Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3151600}
+2023-02-27 13:12:04 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'models' in type 'Affordance' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:12:04 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'affordances' in type 'Link' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:12:04 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dfe92ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a899811, org.springframework.security.web.header.HeaderWriterFilter@36d697ab, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@4de79b7d, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@66383c29, org.springframework.security.web.authentication.logout.LogoutFilter@6ce9771c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@171aa66, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4656fcc5, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@5974b7e8, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@2839e3c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b9b17ce, org.springframework.security.web.session.SessionManagementFilter@315b4202, org.springframework.security.web.access.ExceptionTranslationFilter@699e0bf0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2712e8f4]
+2023-02-27 13:12:04 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:12:04 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping -
+                Adding welcome page: class path resource [static/index.html]
+2023-02-27 13:12:05 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:12:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 9090 (http) with context path ''
+2023-02-27 13:12:05 [main] INFO  c.c.hs.service.ClaritHSApplication -
+                Started ClaritHSApplication in 4.893 seconds (JVM running for 5.519)
+2023-02-27 13:16:37 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:16:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-02-27 13:16:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 57ms. Found 2 MongoDB repository interfaces.
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2af46afd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:16:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 9090 (http)
+2023-02-27 13:16:42 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:16:42 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2023-02-27 13:16:42 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.31]
+2023-02-27 13:16:42 [main] INFO  o.a.c.core.AprLifecycleListener -
+                Loaded APR based Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-02-27 13:16:42 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2023-02-27 13:16:42 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-02-27 13:16:42 [main] INFO  o.a.c.core.AprLifecycleListener -
+                OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-02-27 13:16:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2023-02-27 13:16:42 [main] INFO  o.s.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 1850 ms
+2023-02-27 13:16:43 [main] INFO  org.mongodb.driver.cluster -
+                Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-02-27 13:16:43 [cluster-ClusterId{value='63fc5fe3abc69f4f8a0937d0', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+2023-02-27 13:16:43 [cluster-ClusterId{value='63fc5fe3abc69f4f8a0937d0', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+                Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18925900}
+2023-02-27 13:16:43 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'models' in type 'Affordance' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:16:43 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'affordances' in type 'Link' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:16:44 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45796b2a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fde6f05, org.springframework.security.web.header.HeaderWriterFilter@43c0c13a, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@14168e1, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@6e829e50, org.springframework.security.web.authentication.logout.LogoutFilter@166ce247, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4def42c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73b74615, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@8aeab9e, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@2a2dc0a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b98225c, org.springframework.security.web.session.SessionManagementFilter@67941d, org.springframework.security.web.access.ExceptionTranslationFilter@9e62fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5731caaf]
+2023-02-27 13:16:44 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:16:44 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping -
+                Adding welcome page: class path resource [static/index.html]
+2023-02-27 13:16:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:16:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 9090 (http) with context path ''
+2023-02-27 13:23:40 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:31:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-02-27 13:31:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -
+                Finished Spring Data repository scanning in 120ms. Found 2 MongoDB repository interfaces.
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6b3f6585' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -
+                Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-27 13:31:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat initialized with port(s): 9090 (http)
+2023-02-27 13:31:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Initializing ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:31:16 [main] INFO  o.a.catalina.core.StandardService -
+                Starting service [Tomcat]
+2023-02-27 13:31:16 [main] INFO  o.a.catalina.core.StandardEngine -
+                Starting Servlet engine: [Apache Tomcat/9.0.31]
+2023-02-27 13:31:16 [main] INFO  o.a.c.core.AprLifecycleListener -
+                Loaded APR based Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-02-27 13:31:16 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2023-02-27 13:31:16 [main] INFO  o.a.c.core.AprLifecycleListener -
+                APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-02-27 13:31:16 [main] INFO  o.a.c.core.AprLifecycleListener -
+                OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-02-27 13:31:16 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring embedded WebApplicationContext
+2023-02-27 13:31:16 [main] INFO  o.s.web.context.ContextLoader -
+                Root WebApplicationContext: initialization completed in 2553 ms
+2023-02-27 13:31:17 [main] INFO  org.mongodb.driver.cluster -
+                Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2023-02-27 13:31:18 [cluster-ClusterId{value='63fc634d608f0a5365fa34dc', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+2023-02-27 13:31:18 [cluster-ClusterId{value='63fc634d608f0a5365fa34dc', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+                Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10216100}
+2023-02-27 13:31:18 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'models' in type 'Affordance' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:31:18 [main] INFO  o.s.d.m.c.i.MongoPersistentEntityIndexResolver -
+                Found cycle for field 'affordances' in type 'Link' for path 'affordances -> models -> link -> affordances'
+2023-02-27 13:31:18 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+                Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@84f51d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@316d30ad, org.springframework.security.web.header.HeaderWriterFilter@3313463c, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@67770b37, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@707e4fe4, org.springframework.security.web.authentication.logout.LogoutFilter@602298b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30d5e37c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6cd45b6c, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@14447be, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@5eb5da12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45b96e4c, org.springframework.security.web.session.SessionManagementFilter@176333ee, org.springframework.security.web.access.ExceptionTranslationFilter@3dc46f24, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63a7781]
+2023-02-27 13:31:19 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Initializing ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:31:19 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping -
+                Adding welcome page: class path resource [static/index.html]
+2023-02-27 13:31:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+                Starting ProtocolHandler ["http-nio-9090"]
+2023-02-27 13:31:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+                Tomcat started on port(s): 9090 (http) with context path ''
+2023-02-27 13:31:29 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+                Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-27 13:31:29 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Initializing Servlet 'dispatcherServlet'
+2023-02-27 13:31:29 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+                Completed initialization in 4 ms
+2023-02-27 13:31:42 [http-nio-9090-exec-3] INFO  o.k.adapters.KeycloakDeployment -
+                Loaded URLs from http://localhost:8080/auth/realms/clarit/.well-known/openid-configuration
+2023-02-27 13:31:42 [http-nio-9090-exec-3] INFO  org.mongodb.driver.connection -
+                Opened connection [connectionId{localValue:2, serverValue:9}] to localhost:27017
+2023-02-27 13:33:25 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor -
+                Shutting down ExecutorService 'applicationTaskExecutor'
+2023-02-27 13:33:25 [SpringContextShutdownHook] INFO  org.mongodb.driver.connection -
+                Closed connection [connectionId{localValue:2, serverValue:9}] to localhost:27017 because the pool has been closed.
+2023-02-27 14:25:08 [http-nio-9090-exec-7] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - jerald
+2023-02-27 14:25:08 [http-nio-9090-exec-7] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 14:25:18 [http-nio-9090-exec-8] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - krishna
+2023-02-27 14:25:18 [http-nio-9090-exec-8] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 17:00:36 [http-nio-9090-exec-4] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - krishna
+2023-02-27 17:00:36 [http-nio-9090-exec-4] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 17:00:42 [http-nio-9090-exec-7] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - kris
+2023-02-27 17:00:42 [http-nio-9090-exec-7] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 22:33:38 [http-nio-9090-exec-2] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - jerald
+2023-02-27 22:33:38 [http-nio-9090-exec-2] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 23:46:16 [http-nio-9090-exec-5] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - tamil
+2023-02-27 23:46:16 [http-nio-9090-exec-5] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 23:46:47 [http-nio-9090-exec-6] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - 33311
+2023-02-27 23:46:47 [http-nio-9090-exec-6] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-02-27 23:52:05 [http-nio-9090-exec-2] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - tamil331
+2023-02-27 23:52:05 [http-nio-9090-exec-2] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated

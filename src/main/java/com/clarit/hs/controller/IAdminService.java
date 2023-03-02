@@ -15,16 +15,13 @@ import com.clarit.hs.service.items.Room;
 public interface IAdminService {
 
 	@GetMapping(produces = { "application/hal+json" })
-	public CollectionModel<Room> getAll(boolean occupied);
+	public CollectionModel<Room> getAll(boolean isOccupied);
+	@PostMapping(produces = { "application/hal+json" })
+	public Room book(@RequestBody Room room);
 	
-	@PostMapping(value = "/{number}")
-	public Room book(@PathVariable Integer number);
-
-
-
 	@GetMapping(value = "/{number}")
-	public CollectionModel<Room>  get(@PathVariable int number);
+	public CollectionModel<Room> get(@PathVariable int number);
 	
-	@DeleteMapping(value = "/{number}")
-	public void cancelBooking(int number);
+	@DeleteMapping(value = "{number}")
+	public Room cancelBooking(@PathVariable int number);
 }
