@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IProperty {
 
-	public List<Room> getAll(boolean occupied) ;
+	public List<Room> getAll(boolean isOccupied) ;
     public Room book(Room room) ;
     public List<Room> get(int roomNumber) ;
     public Room cancelBooking(int number) ;

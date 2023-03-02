@@ -1,0 +1,8 @@
+2023-02-28 11:33:13 [http-nio-9090-exec-6] ERROR c.c.h.s.e.ClaritResponseAdvice -
+                un identified User - Cannot invoke "com.clarit.hs.service.items.Customer.add(org.springframework.hateoas.Link)" because "customer" is null
+2023-02-28 11:50:27 [http-nio-9090-exec-5] ERROR c.c.h.s.e.ClaritResponseAdvice -
+                un identified User - Access is denied
+2023-02-28 11:55:22 [http-nio-9090-exec-4] ERROR c.c.h.s.e.ClaritResponseAdvice -
+                un identified User - Access is denied
+2023-02-28 16:21:41 [http-nio-9090-exec-3] ERROR c.c.h.s.e.ClaritResponseAdvice -
+                un identified User - Access is denied

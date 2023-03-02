@@ -16,7 +16,7 @@ public class Property implements IProperty {
 	@Autowired
 	ItemRepository itemRepository;
     @Override
-    public List<Room> getAll(boolean occupied) {
+    public List<Room> getAll(boolean isOccupied) {
         return getAllRooms();
     }
 

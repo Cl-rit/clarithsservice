@@ -2,6 +2,7 @@ package com.clarit.hs.service.admin;
 
 import java.util.List;
 
+import com.clarit.hs.service.items.Room;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Link;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.clarit.hs.controller.IAdminService;
 import com.clarit.hs.service.items.IProperty;
-import com.clarit.hs.service.items.Room;
+
 
 /**
  * Created by mnachiappan on 1/4/23.
@@ -23,7 +24,7 @@ public class AdminService  implements IAdminService {
 	IProperty property;
 
 	@Override
-	public CollectionModel<Room> getAll(boolean occupied) {
+	public CollectionModel<Room> getAll(boolean isOccupied) {
 		List<Room> rooms = property.getAll(false);
 		for(Room room : rooms) {
 	        Link selfLink = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(room.getNumber()).withSelfRel();
@@ -36,11 +37,11 @@ public class AdminService  implements IAdminService {
 
 
 	@Override
-	public Room book(Integer number) {
-		Room room =  property.book(number);
-		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(number).withSelfRel();
-		room.add(link);
-		return room;
+	public Room book(Room room) {
+		Room room1 =  property.book(room);
+		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(room1.getNumber()).withSelfRel();
+		room1.add(link);
+		return room1;
 	}
 
 	@Override
@@ -56,8 +57,11 @@ public class AdminService  implements IAdminService {
 	}
 
 	@Override
-	public void cancelBooking(int number) {
-		// TODO Auto-generated method stub
+	public Room cancelBooking(int number) {
+		Room room1 =  property.cancelBooking(number);
+		Link link = WebMvcLinkBuilder.linkTo(IAdminService.class).slash(number).withSelfRel();
+		room1.add(link);
+		return null;
 		
 	}
 }

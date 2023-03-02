@@ -1,8 +1,11 @@
 package com.clarit.hs.service.items;
 
 import java.util.Date;
+import java.util.List;
 
+import org.springframework.data.annotation.AccessType;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.RepresentationModel;
 
 /**
@@ -52,4 +55,12 @@ public class Room extends RepresentationModel<Room>{
     public void setAvailbility(Date availbility) {
         this.availbility = availbility;
     }
+
+    @AccessType(AccessType.Type.PROPERTY)
+    public void setLinks(List<Link> links) {
+        super.removeLinks();
+        super.add(links);
+    }
+
+
 }

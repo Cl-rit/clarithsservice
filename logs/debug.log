@@ -1,0 +1,8 @@
+2023-03-02 12:31:41 [http-nio-9090-exec-5] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - k
+2023-03-02 12:31:41 [http-nio-9090-exec-5] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
+2023-03-02 12:33:37 [http-nio-9090-exec-8] INFO  c.c.h.s.customer.CustomerService -
+                Getting username - 10
+2023-03-02 12:33:37 [http-nio-9090-exec-8] INFO  c.c.h.s.customer.CustomerService -
+                successfully authenticated
